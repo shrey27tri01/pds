@@ -7,3 +7,9 @@ Main functions are:
 3. `get_rec_by_non_ndx_key`: Search by non-index key  
 4. `get_rec_by_ndx_key`: Search by index key using offset in BST  
 5. `delete_rec_by_ndx_key`: Delete by index key  
+
+## Usage:
+```
+gcc -o pds_tester bst.c contact.c pds.c pds_tester.c
+pds_tester testcase.in
+```
