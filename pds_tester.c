@@ -77,7 +77,7 @@ void process_line( char *test_case )
 		else
 			status = CONTACT_FAILURE;
 		if( status == expected_status ){
-			TREPORT("PASS", "");
+			TREPORT("", "PASS");
 		}
 		else{
 			sprintf(info,"pds_open returned status %d",status);
@@ -100,7 +100,7 @@ void process_line( char *test_case )
 		else
 			status = CONTACT_FAILURE;
 		if( status == expected_status ){
-			TREPORT("PASS", "");
+			TREPORT("", "PASS");
 		}
 		else{
 			sprintf(info,"add_contact returned status %d",status);
@@ -132,7 +132,7 @@ void process_line( char *test_case )
 				if (testContact.contact_id == contact_id && 
 					strcmp(testContact.contact_name,expected_name) == 0 &&
 					strcmp(testContact.phone,expected_phone) == 0){
-						TREPORT("PASS", "");
+						TREPORT("", "PASS");
 				}
 				else{
 					sprintf(info,"Contact data not matching... Expected:{%d,%s,%s} Got:{%d,%s,%s}\n",
@@ -143,7 +143,7 @@ void process_line( char *test_case )
 				}
 			}
 			else
-				TREPORT("PASS", "");
+				TREPORT("", "PASS");
 		}
 	}
 	else if( !strcmp(command,"NON_NDX_SEARCH") ){
@@ -177,7 +177,7 @@ void process_line( char *test_case )
 					strcmp(testContact.contact_name, expected_name) == 0 &&
 					strcmp(testContact.phone, expected_phone) == 0 ){
 						if( expected_io == actual_io ){
-							TREPORT("PASS", "");
+							TREPORT("", "PASS");
 						}
 						else{
 							sprintf(info,"Num I/O not matching for %d... Expected:%d Got:%d\n",
@@ -195,7 +195,7 @@ void process_line( char *test_case )
 				}
 			}
 			else
-				TREPORT("PASS", "");
+				TREPORT("", "PASS");
 		}
 	}
 	else if( !strcmp(command,"NDX_DELETE") ){
@@ -212,7 +212,7 @@ void process_line( char *test_case )
 			TREPORT("FAIL", info);
 		}
 		else{
-			TREPORT("PASS", "");
+			TREPORT("", "PASS");
 		}
 	}
 	else if( !strcmp(command,"CLOSE") ){
@@ -227,7 +227,7 @@ void process_line( char *test_case )
 		else
 			status = CONTACT_FAILURE;
 		if( status == expected_status ){
-			TREPORT("PASS", "");
+			TREPORT("", "PASS");
 		}
 		else{
 			sprintf(info,"pds_close returned status %d",status);

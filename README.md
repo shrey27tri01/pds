@@ -11,5 +11,5 @@ Main functions are:
 ## Usage:
 ```
 gcc -o pds_tester bst.c contact.c pds.c pds_tester.c
-pds_tester testcase.in
+./pds_tester testcase.in
 ```
